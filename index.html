@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
 
@@ -57,36 +57,76 @@
   </header>
 
   <!-- MARQUEE -->
-  <section class="marquee">
-    <div class="marquee__track">
-      <div class="marquee__content">
-        <span>Direção de Arte</span>
-        <span class="marquee__dot">•</span>
-        <span>UI Design</span>
-        <span class="marquee__dot">•</span>
-        <span>Front-end</span>
-        <span class="marquee__dot">•</span>
-        <span>Landing Pages</span>
-        <span class="marquee__dot">•</span>
-        <span>Campanhas Digitais</span>
-        <span class="marquee__dot">•</span>
-        <span>Redes Sociais</span>
-        <span class="marquee__dot">•</span>
-        <span>Direção de Arte</span>
-        <span class="marquee__dot">•</span>
-        <span>UI Design</span>
-        <span class="marquee__dot">•</span>
-        <span>Front-end</span>
-        <span class="marquee__dot">•</span>
-        <span>Landing Pages</span>
-        <span class="marquee__dot">•</span>
-        <span>Campanhas Digitais</span>
-        <span class="marquee__dot">•</span>
-        <span>Redes Sociais</span>
-        <span class="marquee__dot">•</span>
-      </div>
+ <div class="marquee">
+  <div class="marquee__track">
+    <div class="marquee__content">
+      <span>Direção de Arte</span>
+      <span class="marquee__dot">✦</span>
+      <span>UI Design</span>
+      <span class="marquee__dot">✦</span>
+      <span>Front-end</span>
+      <span class="marquee__dot">✦</span>
+      <span>Landing Pages</span>
+      <span class="marquee__dot">✦</span>
+            <span>Campanhas</span>
+      <span class="marquee__dot">✦</span>
+            <span>Redes Sociais</span>
+      <span class="marquee__dot">✦</span>
+            <span>Identidade Visual</span>
+      <span class="marquee__dot">✦</span>
     </div>
-  </section>
+    <!-- Bloco duplicado para loop contínuo -->
+    <div class="marquee__content" aria-hidden="true">
+      <span>Direção de Arte</span>
+      <span class="marquee__dot">✦</span>
+      <span>UI Design</span>
+      <span class="marquee__dot">✦</span>
+      <span>Front-end</span>
+      <span class="marquee__dot">✦</span>
+      <span>Landing Pages</span>
+      <span class="marquee__dot">✦</span>
+      <span>Campanhas</span>
+      <span class="marquee__dot">✦</span>
+      <span>Redes Sociais</span>
+      <span class="marquee__dot">✦</span>
+      <span>Identidade Visual</span>
+      <span class="marquee__dot">✦</span>
+    </div>
+    <!-- Mais duplicatas para garantir largura suficiente -->
+    <div class="marquee__content" aria-hidden="true">
+      <span>Direção de Arte</span>
+      <span class="marquee__dot">✦</span>
+      <span>UI Design</span>
+      <span class="marquee__dot">✦</span>
+      <span>Front-end</span>
+      <span class="marquee__dot">✦</span>
+      <span>Landing Pages</span>
+      <span class="marquee__dot">✦</span>
+      <span>Campanhas</span>
+      <span class="marquee__dot">✦</span>
+      <span>Redes Sociais</span>
+      <span class="marquee__dot">✦</span>
+      <span>Identidade Visual</span>
+      <span class="marquee__dot">✦</span>
+    </div>
+    <div class="marquee__content" aria-hidden="true">
+      <span>Direção de Arte</span>
+      <span class="marquee__dot">✦</span>
+      <span>UI Design</span>
+      <span class="marquee__dot">✦</span>
+      <span>Front-end</span>
+      <span class="marquee__dot">✦</span>
+      <span>Landing Pages</span>
+      <span class="marquee__dot">✦</span>
+      <span>Campanhas</span>
+      <span class="marquee__dot">✦</span>
+      <span>Redes Sociais</span>
+      <span class="marquee__dot">✦</span>
+      <span>Identidade Visual</span>
+      <span class="marquee__dot">✦</span>
+    </div>
+  </div>
+</div>
 
   <!-- SOBRE -->
   <section class="sobre" id="sobre">
@@ -134,10 +174,10 @@
     <div class="trabalhos__inner">
       <div class="trabalhos__header">
         <p class="section-label">Trabalhos selecionados</p>
-        <a href="#" class="trabalhos__ver-todos">Ver todos &rarr;</a>
+        <a href="trabalhos.html" class="trabalhos__ver-todos">Ver todos &rarr;</a>
       </div>
       <div class="trabalhos__grid">
-        <a href="#" class="trabalho-card">
+        <a href="src/cnt.html" target="_blank" class="trabalho-card">
           <div class="trabalho-card__img">
             <span class="trabalho-card__num">01</span>
           </div>
@@ -150,30 +190,30 @@
             <p class="trabalho-card__desc">Experiência comemorativa aprovada na primeira versão.</p>
           </div>
         </a>
-        <a href="#" class="trabalho-card">
+        <a href="src/80soea.html" target="_blank" class="trabalho-card">
           <div class="trabalho-card__img">
             <span class="trabalho-card__num">02</span>
           </div>
           <div class="trabalho-card__body">
             <div class="trabalho-card__tags">
-              <span>Direção de Arte</span>
-              <span>Social</span>
+              <span>Identidade Visual</span>
+              <span>Evento</span>
             </div>
-            <h3 class="trabalho-card__title">SomosCoop</h3>
-            <p class="trabalho-card__desc">Identidade visual e gestão criativa de redes sociais.</p>
+            <h3 class="trabalho-card__title">80ª SOEA</h3>
+            <p class="trabalho-card__desc">Identidade visual para o maior evento da engenharia brasileira.</p>
           </div>
         </a>
-        <a href="#" class="trabalho-card">
+        <a href="src/sitesomoscoop.html" target="_blank" class="trabalho-card">
           <div class="trabalho-card__img">
             <span class="trabalho-card__num">03</span>
           </div>
           <div class="trabalho-card__body">
             <div class="trabalho-card__tags">
-              <span>Front-end</span>
-              <span>Campanha</span>
+              <span>UI Design</span>
+              <span>Prototipação</span>
             </div>
-            <h3 class="trabalho-card__title">#CliqueConsciente</h3>
-            <p class="trabalho-card__desc">Conceito e direção visual para campanha digital.</p>
+            <h3 class="trabalho-card__title">Site SomosCoop</h3>
+            <p class="trabalho-card__desc">Redesign e expansão do portal do cooperativismo brasileiro.</p>
           </div>
         </a>
       </div>
@@ -185,18 +225,18 @@
     <div class="contato__inner">
       <h2 class="contato__title">Vamos criar algo <em>juntos?</em></h2>
       <div class="contato__links">
-        <a href="mailto:layanne@derivadesign.com.br" class="contato__link">
+        <a href="mailto:contato@layannecosta.com.br" class="contato__link">
           <span class="contato__link-label">Email</span>
-          <span class="contato__link-value">layanne@derivadesign.com.br</span>
+          <span class="contato__link-value">contato@layannecosta.com.br</span>
         </a>
         <a href="https://linkedin.com/in/layannecosta" target="_blank" rel="noopener" class="contato__link">
           <span class="contato__link-label">LinkedIn</span>
           <span class="contato__link-value">/in/layannecosta</span>
         </a>
-        <a href="#" class="contato__link">
-          <span class="contato__link-label">Portfólio</span>
-          <span class="contato__link-value">layannecosta.com.br</span>
-        </a>
+        <!-- <a href="#" class="contato__link">
+          <span class="contato__link-label">WhatsApp</span>
+          <span class="contato__link-value">+55 61 99170-9420</span>
+        </a> -->
       </div>
     </div>
     <svg class="contato__brush" viewBox="0 0 400 80" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -208,10 +248,9 @@
   <footer class="footer">
     <div class="footer__inner">
       <p>&copy; 2025 Layanne Costa — Todos os direitos reservados</p>
-      <p class="footer__brand">Deriva Design</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="src/script.js"></script>
 </body>
 </html>
