@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabalhos — Layanne Costa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/style.css">
+  <style>
+    .trabalhos-page {
+      padding: 8rem 2rem 6rem;
+      min-height: 100vh;
+    }
+
+    .trabalhos-page__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .trabalhos-page__header {
+      margin-bottom: 4rem;
+    }
+
+    .trabalhos-page__title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .trabalhos-page__desc {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 520px;
+      line-height: 1.7;
+    }
+
+    .trabalhos-page__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    @media (max-width: 900px) {
+      .trabalhos-page__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .trabalhos-page {
+        padding: 7rem 1.25rem 5rem;
+      }
+
+      .trabalhos-page__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="../../index.html" class="nav__logo">Layanne Costa</a>
+      <div class="nav__links">
+        <a href="index.html#trabalhos">Trabalhos</a>
+        <a href="index.html#sobre">Sobre</a>
+        <a href="index.html#contato">Contato</a>
+        <a href="index.html#contato" class="nav__cta">Vamos conversar</a>
+      </div>
+      <button class="nav__toggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#trabalhos">Trabalhos</a>
+    <a href="index.html#sobre">Sobre</a>
+    <a href="index.html#contato">Contato</a>
+    <a href="index.html#contato" class="nav__cta">Vamos conversar</a>
+  </div>
+
+  <!-- TRABALHOS -->
+  <section class="trabalhos-page">
+    <div class="trabalhos-page__inner">
+      <div class="trabalhos-page__header">
+        <p class="section-label">Portfólio completo</p>
+        <h1 class="trabalhos-page__title">Todos os<br><em>trabalhos</em></h1>
+        <p class="trabalhos-page__desc">Uma seleção de projetos de direção de arte, UI design e front-end desenvolvidos ao longo da carreira.</p>
+      </div>
+
+      <div class="trabalhos-page__grid">
+
+        <!-- 01 -->
+        <a href="cnt.html" class="trabalho-card">
+          <div class="trabalho-card__img">
+            <span class="trabalho-card__num">01</span>
+          </div>
+          <div class="trabalho-card__body">
+            <div class="trabalho-card__tags">
+              <span>UI Design</span>
+              <span>Landing Page</span>
+            </div>
+            <h3 class="trabalho-card__title">CNT — 70 anos</h3>
+            <p class="trabalho-card__desc">Experiência comemorativa aprovada na primeira versão.</p>
+          </div>
+        </a>
+
+        <!-- 02 -->
+        <a href="em-breve.html" class="trabalho-card">
+          <div class="trabalho-card__img">
+            <span class="trabalho-card__num">02</span>
+          </div>
+          <div class="trabalho-card__body">
+            <div class="trabalho-card__tags">
+              <span>Direção de Arte</span>
+              <span>Social</span>
+            </div>
+            <h3 class="trabalho-card__title">SomosCoop</h3>
+            <p class="trabalho-card__desc">Identidade visual e gestão criativa de redes sociais.</p>
+          </div>
+        </a>
+
+        <!-- 03 -->
+        <a href="em-breve.html" class="trabalho-card">
+          <div class="trabalho-card__img">
+            <span class="trabalho-card__num">03</span>
+          </div>
+          <div class="trabalho-card__body">
+            <div class="trabalho-card__tags">
+              <span>Front-end</span>
+              <span>Campanha</span>
+            </div>
+            <h3 class="trabalho-card__title">#CliqueConsciente</h3>
+            <p class="trabalho-card__desc">Conceito e direção visual para campanha digital.</p>
+          </div>
+        </a>
+
+        <!-- 04 -->
+        <a href="em-breve.html" class="trabalho-card">
+          <div class="trabalho-card__img">
+            <span class="trabalho-card__num">04</span>
+          </div>
+          <div class="trabalho-card__body">
+            <div class="trabalho-card__tags">
+              <span>Identidade Visual</span>
+              <span>Campanhas</span>
+            </div>
+            <h3 class="trabalho-card__title">Sabin</h3>
+            <p class="trabalho-card__desc">Direção visual para campanhas institucionais de saúde.</p>
+          </div>
+        </a>
+
+        <!-- 05 -->
+        <a href="em-breve.html" class="trabalho-card">
+          <div class="trabalho-card__img">
+            <span class="trabalho-card__num">05</span>
+          </div>
+          <div class="trabalho-card__body">
+            <div class="trabalho-card__tags">
+              <span>Direção de Arte</span>
+              <span>Social</span>
+            </div>
+            <h3 class="trabalho-card__title">Sebrae</h3>
+            <p class="trabalho-card__desc">Conteúdo visual estratégico para redes sociais.</p>
+          </div>
+        </a>
+
+        <!-- 06 -->
+        <a href="em-breve.html" class="trabalho-card">
+          <div class="trabalho-card__img">
+            <span class="trabalho-card__num">06</span>
+          </div>
+          <div class="trabalho-card__body">
+            <div class="trabalho-card__tags">
+              <span>Campanhas</span>
+              <span>Direção de Arte</span>
+            </div>
+            <h3 class="trabalho-card__title">ApexBrasil</h3>
+            <p class="trabalho-card__desc">Peças digitais para campanhas de promoção de exportações.</p>
+          </div>
+        </a>
+
+        <!-- 07 -->
+        <a href="em-breve.html" class="trabalho-card">
+          <div class="trabalho-card__img">
+            <span class="trabalho-card__num">07</span>
+          </div>
+          <div class="trabalho-card__body">
+            <div class="trabalho-card__tags">
+              <span>Identidade Visual</span>
+              <span>Direção de Arte</span>
+            </div>
+            <h3 class="trabalho-card__title">Sescoop</h3>
+            <p class="trabalho-card__desc">Direção de arte para comunicação cooperativista.</p>
+          </div>
+        </a>
+
+        <!-- 08 -->
+        <a href="em-breve.html" class="trabalho-card">
+          <div class="trabalho-card__img">
+            <span class="trabalho-card__num">08</span>
+          </div>
+          <div class="trabalho-card__body">
+            <div class="trabalho-card__tags">
+              <span>UI Design</span>
+              <span>Landing Page</span>
+            </div>
+            <h3 class="trabalho-card__title">Confea</h3>
+            <p class="trabalho-card__desc">Interface institucional com foco em clareza e hierarquia visual.</p>
+          </div>
+        </a>
+
+        <!-- 09 -->
+        <a href="em-breve.html" class="trabalho-card">
+          <div class="trabalho-card__img">
+            <span class="trabalho-card__num">09</span>
+          </div>
+          <div class="trabalho-card__body">
+            <div class="trabalho-card__tags">
+              <span>Direção de Arte</span>
+              <span>Campanhas</span>
+            </div>
+            <h3 class="trabalho-card__title">Casa Thomas Jefferson</h3>
+            <p class="trabalho-card__desc">Campanhas sazonais e material gráfico para comunicação.</p>
+          </div>
+        </a>
+
+        <!-- 10 -->
+        <a href="em-breve.html" class="trabalho-card">
+          <div class="trabalho-card__img">
+            <span class="trabalho-card__num">10</span>
+          </div>
+          <div class="trabalho-card__body">
+            <div class="trabalho-card__tags">
+              <span>UI Design</span>
+              <span>Front-end</span>
+            </div>
+            <h3 class="trabalho-card__title">Poupex</h3>
+            <p class="trabalho-card__desc">Interface digital para serviços financeiros.</p>
+          </div>
+        </a>
+
+        <!-- 11 -->
+        <a href="em-breve.html" class="trabalho-card">
+          <div class="trabalho-card__img">
+            <span class="trabalho-card__num">11</span>
+          </div>
+          <div class="trabalho-card__body">
+            <div class="trabalho-card__tags">
+              <span>Direção de Arte</span>
+              <span>Social</span>
+            </div>
+            <h3 class="trabalho-card__title">Projeto 11</h3>
+            <p class="trabalho-card__desc">Em breve.</p>
+          </div>
+        </a>
+
+        <!-- 12 -->
+        <a href="em-breve.html" class="trabalho-card">
+          <div class="trabalho-card__img">
+            <span class="trabalho-card__num">12</span>
+          </div>
+          <div class="trabalho-card__body">
+            <div class="trabalho-card__tags">
+              <span>Identidade Visual</span>
+              <span>Branding</span>
+            </div>
+            <h3 class="trabalho-card__title">Projeto 12</h3>
+            <p class="trabalho-card__desc">Em breve.</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+    <section class="contato" id="contato">
+    <div class="contato__inner">
+      <h2 class="contato__title">Vamos criar algo <em>juntos?</em></h2>
+      <div class="contato__links">
+        <a href="mailto:contato@layannecosta.com.br" class="contato__link">
+          <span class="contato__link-label">Email</span>
+          <span class="contato__link-value">contato@layannecosta.com.br</span>
+        </a>
+        <a href="https://linkedin.com/in/layannecosta" target="_blank" rel="noopener" class="contato__link">
+          <span class="contato__link-label">LinkedIn</span>
+          <span class="contato__link-value">/in/layannecosta</span>
+        </a>
+        <!-- <a href="#" class="contato__link">
+          <span class="contato__link-label">WhatsApp</span>
+          <span class="contato__link-value">+55 61 99170-9420</span>
+        </a> -->
+      </div>
+    </div>
+    <svg class="contato__brush" viewBox="0 0 400 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 40 C40 10, 100 70, 160 35 S280 60, 395 20" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" fill="none"/>
+    </svg>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p>&copy; 2025 Layanne Costa — Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script src="../scripts/script.js"></script>
+</body>
+</html>
