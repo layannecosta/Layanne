@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Em breve — Layanne Costa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #fafafa;
+      --bg-light: #f2f2f2;
+      --text: #0a0a0a;
+      --text-muted: #141414;
+      --accent: #E8503A;
+      --accent-hover: #ff6b55;
+      --font-body: 'Inter', sans-serif;
+      --font-display: 'Space Grotesk', sans-serif;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-back {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.3s, gap 0.3s;
+    }
+
+    .nav-back:hover {
+      color: var(--accent);
+      gap: 0.7rem;
+    }
+
+    /* MAIN */
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Fundo decorativo */
+    main::before {
+      content: '';
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232, 80, 58, 0.07) 0%, transparent 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .content {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      max-width: 560px;
+    }
+
+    .label {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 2rem;
+    }
+
+    .title {
+      font-family: var(--font-display);
+      font-size: clamp(3.5rem, 10vw, 7rem);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    .title em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .desc {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 3rem;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.3rem;
+      transition: gap 0.3s, color 0.3s;
+    }
+
+    .back-link:hover {
+      gap: 1rem;
+      color: var(--accent);
+    }
+
+    /* Decoração tipográfica ao fundo */
+    .bg-text {
+      position: absolute;
+      font-family: var(--font-display);
+      font-size: clamp(8rem, 20vw, 18rem);
+      font-weight: 700;
+      color: rgba(232, 80, 58, 0.04);
+      letter-spacing: -0.05em;
+      white-space: nowrap;
+      user-select: none;
+      pointer-events: none;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 1.5rem 2rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .footer-brand {
+      font-family: var(--font-display);
+      font-weight: 600;
+    }
+
+    /* CONTATO */
+    .contato {
+      padding: 6rem 2rem;
+      background: var(--bg-light);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contato__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .contato__title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 3.5rem;
+    }
+
+    .contato__title em { font-style: italic; color: var(--accent); }
+
+    .contato__links { display: flex; flex-direction: column; }
+
+    .contato__link {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid rgba(10, 10, 10, 0.08);
+      transition: padding-left 0.3s;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .contato__link:last-child { border-bottom: 1px solid rgba(10, 10, 10, 0.08); }
+    .contato__link:hover { padding-left: 1rem; }
+    .contato__link:hover .contato__link-value { color: var(--accent); }
+
+    .contato__link-label {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      min-width: 100px;
+    }
+
+    .contato__link-value {
+      font-size: 1.05rem;
+      color: var(--text);
+      transition: color 0.3s;
+    }
+
+    @media (max-width: 600px) {
+      nav { padding: 1.25rem; }
+
+      .contato__link {
+        flex-direction: column;
+        gap: 0.25rem;
+        align-items: flex-start;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="../../index.html">Layanne Costa</a>
+    <a class="nav-back" href="../../trabalhos.html">← Voltar aos trabalhos</a>
+  </nav>
+
+  <!-- MAIN -->
+  <main>
+    <span class="bg-text" aria-hidden="true">em breve</span>
+    <div class="content">
+      <span class="label">Trabalho em andamento</span>
+      <h1 class="title">Em <em>breve!</em></h1>
+      <p class="desc">Este case está sendo preparado com cuidado. Volte em breve para conferir.</p>
+      <a href="../../trabalhos.html" class="back-link">Ver outros trabalhos →</a>
+    </div>
+  </main>
+
+  <!-- CONTATO -->
+  <section class="contato">
+    <div class="contato__inner">
+      <h2 class="contato__title">Vamos criar algo <em>juntos?</em></h2>
+      <div class="contato__links">
+        <a href="mailto:contato@layannecosta.com.br" class="contato__link">
+          <span class="contato__link-label">Email</span>
+          <span class="contato__link-value">contato@layannecosta.com.br</span>
+        </a>
+        <a href="https://linkedin.com/in/layannecosta" target="_blank" rel="noopener" class="contato__link">
+          <span class="contato__link-label">LinkedIn</span>
+          <span class="contato__link-value">/in/layannecosta</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>&copy; 2025 Layanne Costa — Todos os direitos reservados</span>
+  </footer>
+
+</body>
+</html>
