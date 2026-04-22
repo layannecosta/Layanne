@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerador de Proposta — Layanne Costa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/proposta-interna.css" />
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ─── FORMULÁRIO ─── -->
+  <aside class="form-panel">
+    <a href="../../index.html" class="form-logo">Layanne<span>.</span></a>
+
+    <div class="form-section">
+      <p class="form-section-title">Dados do Cliente</p>
+      <div class="form-group">
+        <label>Nome do cliente / empresa</label>
+        <input type="text" id="clientName" placeholder="Ex: Maria Silva" />
+      </div>
+      <div class="form-group">
+        <label>Projeto / campanha</label>
+        <input type="text" id="projectName" placeholder="Ex: Campanha Conselheira Mútua" />
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Data</label>
+          <input type="date" id="propDate" />
+        </div>
+        <div class="form-group">
+          <label>Validade (dias)</label>
+          <input type="number" id="validity" placeholder="7" value="7" min="1" />
+        </div>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <p class="form-section-title">Descrição do Projeto</p>
+      <div class="form-group">
+        <textarea id="projectDesc" placeholder="Descreva brevemente o escopo geral do projeto..."></textarea>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <p class="form-section-title">Itens e Valores</p>
+      <div class="items-list" id="itemsList"></div>
+      <button class="btn-add" onclick="addItem()">+ Adicionar item</button>
+    </div>
+
+    <div class="form-section">
+      <p class="form-section-title">Observações</p>
+      <div class="form-group">
+        <textarea id="obs" placeholder="Prazo de entrega, forma de pagamento, o que está incluso e o que não está..."></textarea>
+      </div>
+    </div>
+
+    <button class="btn-generate" onclick="generateProposal()">Gerar proposta →</button>
+  </aside>
+
+  <!-- ─── PREVIEW ─── -->
+  <main class="preview-panel" id="previewPanel">
+    <div class="preview-actions" id="previewActions" style="display:none;">
+      <button class="btn-action secondary" onclick="clearProposal()">Limpar</button>
+      <button class="btn-action" onclick="window.print()">Imprimir / Salvar PDF</button>
+    </div>
+    <div id="proposalOutput">
+      <div class="empty-state">
+        <div class="empty-state__icon">📄</div>
+        <p>Preencha os dados ao lado e clique em <strong>Gerar proposta</strong> para visualizar.</p>
+      </div>
+    </div>
+  </main>
+
+</div>
+
+<script src="../scripts/proposta-interna.js"></script>
+
+</body>
+</html>
